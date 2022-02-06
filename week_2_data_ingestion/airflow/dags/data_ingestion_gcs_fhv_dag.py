@@ -70,7 +70,7 @@ with DAG(
 ) as dag:
     download_dataset_task = BashOperator(
         task_id="download_dataset_task",
-        bash_command=f"curl -sSL {URL_PREFIX + dataset_file} > {path_to_local_home}/{dataset_file}"
+        bash_command=f"curl -sSLf {URL_PREFIX + dataset_file} > {path_to_local_home}/{dataset_file}"
     )
 
     format_to_parquet_task = PythonOperator(
