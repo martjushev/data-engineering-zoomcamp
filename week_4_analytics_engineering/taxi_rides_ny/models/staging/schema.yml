@@ -15,6 +15,7 @@ sources:
       tables:
         - name: green_tripdata
         - name: yellow_tripdata
+        - name: fhv_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
 
@@ -201,3 +202,15 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
+    - name: stg_hfv_tripdata
+      description: For hire vehicles
+      columns:
+          - name: tripid
+          - name: dispatching_base_num
+          - name: pickup_datetime
+          - name: dropoff_datetime
+          - name: pickup_locationid
+          - name: DOLocationID
+          - name: dropoff_locationid
+          - name: Affiliated_base_number
+          - name: SR_FLAG
