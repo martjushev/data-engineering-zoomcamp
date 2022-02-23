@@ -205,7 +205,6 @@ models:
     - name: stg_hfv_tripdata
       description: For hire vehicles
       columns:
-          - name: tripid
           - name: dispatching_base_num
           - name: pickup_datetime
           - name: dropoff_datetime

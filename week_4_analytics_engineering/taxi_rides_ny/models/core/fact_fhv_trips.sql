@@ -5,7 +5,6 @@ with dim_zones as (
     where borough != 'Unknown'
 )
 select 
-    tripdata.tripid, 
     tripdata.SR_Flag, 
     tripdata.Affiliated_base_number, 
     tripdata.pickup_locationid, 
